@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 .navbar-container {
     .navbar-nav {
         column-gap: 25px;
@@ -7,4 +8,13 @@
     }
 }
 
-
+//for mobile view and tablet view add background color to navbar
+@media (max-width: 991px) {
+    .navbar {
+        top:-8px;
+        .navbar-container {
+            background-color: $light-box;
+            padding: 10px 20px;
+        }
+    }
+}
