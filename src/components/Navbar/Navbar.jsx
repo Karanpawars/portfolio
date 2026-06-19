@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Navbar
       expand="lg"
-      // fixed="top"
+      fixed="top"
       className="custom-navbar"
     >
       <Container className="navbar-container">

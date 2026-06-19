@@ -4,7 +4,7 @@ import "./_hero.scss";
 
 const Hero = () => {
   return (
-    <Container className="pt-5 pb-5 hero-container">
+    <Container className="pt-5 pb-5 mt-5 hero-container">
         <section className="hero-section d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between">
             <div className="hero-content">
                 <span className="hero-title">Hi, i'm</span>
