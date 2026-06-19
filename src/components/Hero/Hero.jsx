@@ -1,4 +1,5 @@
 import { Container, Button } from "react-bootstrap";
+import profileImg from "../../assets/images/karan-pawar.png";
 import "./_hero.scss";
 
 const Hero = () => {
@@ -8,9 +9,9 @@ const Hero = () => {
             <div className="hero-content">
                 <span className="hero-title">Hi, i'm</span>
                 <h1 className="hero-title name fw-bold">Karan <span className="text-primary">Pawar</span></h1>
-                <h5 className="hero-title mb-2">Front-End Tech Lead | UI/UX Expert.</h5>
+                <h5 className="hero-title mb-2">Front-End Tech Lead | Ui/Ux Expert.</h5>
                 <h5 className="hero-title mt-0">9+ Years of Experience</h5>
-                <p className="hero-description mt-4 mb-4">I build scalable, high performance web applications<br/> and lead teams to deliver outstanding products</p>
+                <p className="hero-description mt-4 mb-4">I build scalable, high performance web applications<br/> and lead teams to deliver outstanding products.</p>
                 <div className="hero-buttons d-flex gap-3">
                     <Button size="" download href="../assets/Karan_Pawar_Frontend_Tech_Lead_Resume.pdf">
                         <i className="bi bi-download me-2"></i>
@@ -23,7 +24,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="hero-image-container mt-0 mb-3 mt-lg-0">
-                <img src="https://placehold.co/400x300" alt="Hero Image" className="hero-image" />
+                <img src={profileImg} alt="Hero Image" className="hero-image" />
             </div>
         </section>
         <section className="social-icons d-flex align-items-center gap-4 mt-3">
