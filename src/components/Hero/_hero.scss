@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+.hero-container {
+    .name {
+        font-size: 5rem;
+        span {
+            color: $primary-light !important;
+        }
+    }
+    .hero-buttons {
+        a {
+            background-color: $primary-dark;
+            border:0;
+        }
+    }
+    .indicators {
+        .boxes {
+            background-color: $light-box;
+            width: 100%;
+            height: 100%;
+            // border: 1px solid $text-primary;
+        }
+    }
+}

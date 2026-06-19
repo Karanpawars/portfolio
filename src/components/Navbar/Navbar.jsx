@@ -1,17 +1,16 @@
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
-// import "../styles/main.scss";
 import "./_navbar.scss";
 
 const Header = () => {
   return (
     <Navbar
       expand="lg"
-      fixed="top"
+      // fixed="top"
       className="custom-navbar"
     >
-      <Container>
+      <Container className="navbar-container">
         <Navbar.Brand href="#home">
-          <span className="logo-text text-white">
+          <span className="logo-text text-white fw-bold">
             Karan Pawar
           </span>
         </Navbar.Brand>
@@ -41,7 +40,7 @@ const Header = () => {
               Contact
             </Nav.Link>
 
-            <Button className="resume-btn">
+            <Button className="resume-btn ms-lg-5">
               Resume
             </Button>
 
