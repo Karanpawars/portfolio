@@ -1,5 +1,5 @@
 import { Container, Button } from "react-bootstrap";
-import profileImg from "../../assets/images/karan-pawar.png";
+// import profileImg from "../../assets/images/karan-pawar2.png";
 import "./_hero.scss";
 
 const Hero = () => {
@@ -23,9 +23,7 @@ const Hero = () => {
                     </Button>
                 </div>
             </div>
-            <div className="hero-image-container mt-0 mb-3 mt-lg-0">
-                <img src={profileImg} alt="Hero Image" className="hero-image" />
-            </div>
+            {/* <img src={profileImg} alt="Hero Image" className="hero-image w-20" /> */}
         </section>
         <section className="social-icons d-flex align-items-center gap-4 mt-3">
             <a href="https://github.com/karanpawar" target="_blank" rel="noopener noreferrer">
@@ -55,6 +53,20 @@ const Hero = () => {
                 <h2>100%</h2>
                 <span>Client Satisfaction</span>
             </div>
+        </section>
+        <section className="mt-3 d-flex flex-column justify-content-between flex-lg-row gap-3">
+            <span className="d-flex align-items-center gap-3">
+                <i className="bi bi-globe fs-3 text-primary text-success"></i>
+                Open to Remote Opportunities Worldwide.
+            </span>
+            <span className="d-flex align-items-center gap-3">
+                <i className="bi bi-check-circle fs-3 text-primary text-success"></i>
+                Immediate Available for Projects.
+            </span>
+            <span className="d-flex align-items-center gap-3">
+                <i className="bi bi-code fs-3 text-primary text-success"></i>
+                Available for Freelance, Contract, and Full-Time Roles.
+            </span>
         </section>
     </Container>
   );
