@@ -1,0 +1,87 @@
+@use "../../styles/variables" as *;
+.why-choose {
+
+    .section-heading {
+
+        span{
+            color:$primary;
+            font-size:14px;
+            font-weight:700;
+            letter-spacing:2px;
+        }
+
+        h2{
+            color: $text-primary;
+            font-size:42px;
+            font-weight:700;
+            margin:15px 0;
+        }
+
+        p{
+            color:#94a3b8;
+            max-width:700px;
+            margin:auto;
+        }
+
+    }
+
+    .feature-card{
+
+        background:$card-bg;
+        border:1px solid $border-color;
+        border-radius:18px;
+        padding:35px 30px;
+        transition:.35s;
+        height:100%;
+
+        &:hover {
+            transform: translateY(-10px);
+            border-color: $primary;
+            box-shadow: 0 20px 40px rgba($primary, 0.25);
+            .icon {
+                background: $primary;
+                i {
+                    color: #fff;
+                }
+            }
+        }
+
+        .icon{
+
+            width:70px;
+            height:70px;
+            border-radius:16px;
+            background:rgba($primary,.15);
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            margin-bottom:25px;
+
+            i{
+
+                font-size:30px;
+                color:#22c55e;
+
+            }
+
+        }
+
+        h4{
+
+            color: $text-primary;
+            margin-bottom:15px;
+
+        }
+
+        p{
+
+            color:#94a3b8;
+            line-height:1.7;
+
+        }
+
+    }
+
+}

@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+footer {
+    border-top: 1px solid $border-color;
+    .title {
+        border-bottom: 5px solid $border-color;
+    }
+}
+
+@media (max-width: 991px) {
+    footer {
+        .columns {
+            border-bottom: 1px solid $border-color;
+            padding-bottom: 15px;
+            margin-bottom: 5px;
+        }
+    }
+}

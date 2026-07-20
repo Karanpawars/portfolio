@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+
+.contact-section {
+    .contact-rhs {
+        border: 1px solid $border-color;
+        background-color: $card-bg;
+    }
+}
+
+@media (max-width: 991px) { 
+    .contact-section {
+        .w-30,
+        .w-50 {
+            width: 100% !important;
+        }
+    }
+}

@@ -1,18 +1,24 @@
+import { Link, NavLink } from "react-router-dom";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
+import logo from "../../assets/images/logo.png";
 import "./_navbar.scss";
 
 const Header = () => {
   return (
+    <>
+    <div className="top-strip">
+      <div className="container">
+        🚀 Trusted Website Development Services • Fast • Responsive • SEO Optimized
+      </div>
+    </div>
     <Navbar
       expand="lg"
       fixed="top"
       className="custom-navbar"
     >
       <Container className="navbar-container">
-        <Navbar.Brand href="#home">
-          <span className="logo-text text-white fw-bold">
-            Karan Pawar
-          </span>
+        <Navbar.Brand as={NavLink} to="/">
+          <img src={logo} alt="Karan Pawar" className="hero-image rounded img-fluid"/>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-nav" className="navbar-toggler" />
@@ -20,34 +26,35 @@ const Header = () => {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto align-items-lg-center">
 
-            <Nav.Link href="#about" className="nav-link text-white">
+            <Nav.Link as={NavLink} to="/about" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
               About
             </Nav.Link>
 
-            <Nav.Link href="#experience" className="nav-link text-white">
-              Experience
+            <Nav.Link as={NavLink} to="/process" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+              Process
             </Nav.Link>
 
-            <Nav.Link href="#projects" className="nav-link text-white">
+            <Nav.Link as={NavLink} to="/projects" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
               Projects
             </Nav.Link>
 
-            <Nav.Link href="#services" className="nav-link text-white">
-              Services
+            <Nav.Link as={NavLink} to="/blog" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+              Blog
             </Nav.Link>
 
-            <Nav.Link href="#contact" className="nav-link text-white">
+            <Nav.Link as={NavLink} to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
               Contact
             </Nav.Link>
 
-            <Button className="resume-btn ms-lg-5">
-              Resume
-            </Button>
+            <a href="https://wa.me/917045894361" target="_blank" rel="noopener noreferrer" role="button" className="chat-button text-center">
+              Let's Talk
+            </a>
 
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </>
   );
 };
 

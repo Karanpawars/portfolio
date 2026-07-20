@@ -1,0 +1,224 @@
+@use "../../styles/variables" as *;
+
+.projects-section {
+    background: $bg-primary;
+    .section-content {
+        span {
+            color: $primary;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: $text-primary;
+            font-size: 42px;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        p {
+            color: $text-secondary;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: $primary-dark;
+            border: none;
+            border-radius: 10px;
+
+            &:hover {
+                background: $primary-dark;
+            }
+        }
+    }
+
+    .project-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .project-card {
+            min-width: 235px;
+            background: $card-bg;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: .35s;
+            border: 1px solid $border-color;
+            &:hover {
+                transform: translateY(-8px);
+                border-color: $primary;
+                box-shadow: 0 15px 40px rgba($primary,.25);
+                img {
+                    transform: scale(1.08);
+                }
+            }
+            .project-image {
+                height: 220px;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+                img {
+                    max-width: 80%;
+                    max-height: 80%;
+                    object-fit: contain;
+                }
+            }
+            .project-content {
+                padding: 20px;
+                h5 {
+                    color: $text-primary;
+                    margin-bottom: 8px;
+                }
+                span {
+                    color: $text-secondary;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:991px){
+        .section-content{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .project-list{
+            justify-content:center;
+        }
+
+    }
+
+    @media (max-width:767px){
+        .section-content{
+            h2{
+                font-size:30px;
+            }
+        }
+        .project-list{
+            .project-card{
+                min-width:280px;
+            }
+        }
+    }
+}
+
+.projects-page {
+  background: $bg-primary;
+  min-height: 100vh;
+
+  .project-image {
+        height: 220px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+    }
+
+  .project-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 8px;
+  justify-content: center;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  button {
+    flex: 0 0 auto;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 1px solid $border-color;
+    background: $card-bg;
+    color: $text-primary;
+    transition: 0.3s;
+
+    &.active {
+      background: $primary !important;
+      color: #fff;
+    }
+  }
+}
+
+  .project-card {
+    background: $card-bg;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+    transition: .3s;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,.35);
+    }
+
+    // img {
+    //   width: 100%;
+    //   height: 220px;
+    //   object-fit: cover;
+    // }
+
+    .content {
+      padding: 20px;
+
+      h4 {
+        color: #fff;
+        margin-bottom: 8px;
+      }
+
+      span {
+        color: #8fa3c4;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .visit-btn {
+        display: inline-block;
+        text-decoration: none;
+        background: $primary-dark;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 10px;
+        transition: .3s;
+
+        &:hover {
+          background: $primary-dark;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project-tabs {
+    justify-content: flex-start !important;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    button {
+      min-width: 150px; // only 2–2.5 tabs visible
+      text-align: center;
+
+    }
+  }
+
+}

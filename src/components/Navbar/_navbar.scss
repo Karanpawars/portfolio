@@ -1,10 +1,49 @@
-@import "../../styles/variables";
-.navbar-container {
-    .navbar-nav {
-        column-gap: 25px;
-    }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb%28255,255,255%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+@use "../../styles/variables" as *;
+.top-strip {
+    background: linear-gradient(90deg, #16a34a, #2563eb);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    padding: 1px 0;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    background-color: $bg-primary;
+    border-bottom: 1px solid $border-color;
+    padding: 0 !important;
+    top: 20px !important;
+    .navbar-container {
+        img {
+            width: 50%;
+        }
+        .navbar-nav {
+            column-gap: 25px;
+            .nav-link {
+                color: $text-primary;
+                &:hover {  
+                    color: $primary !important;
+                }
+                &.active {
+                    color: $primary !important;
+                }
+            }
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb%28255,255,255%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .chat-button {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 4px 15px;
+            color: #fff;
+        }
     }
 }
 
@@ -13,8 +52,13 @@
     .navbar {
         top:-8px;
         .navbar-container {
-            background-color: $light-box;
             padding: 10px 20px;
+            .navbar-brand {
+                width: 75%;
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
 }

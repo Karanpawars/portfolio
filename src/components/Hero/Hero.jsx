@@ -1,72 +1,52 @@
 import { Container, Button } from "react-bootstrap";
-// import profileImg from "../../assets/images/karan-pawar2.png";
+import { Link } from "react-router-dom";
+import profileImg from "../../assets/images/hero-image.png";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 import "./_hero.scss";
+import Footer from "../Footer/Footer";
 
 const Hero = () => {
   return (
-    <Container className="pt-5 pb-5 mt-5 hero-container">
+    <Container className="pt-5 mt-5 hero-container">
         <section className="hero-section d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between">
-            <div className="hero-content">
-                <span className="hero-title">Hi, i'm</span>
-                <h1 className="hero-title name fw-bold">Karan <span className="text-primary">Pawar</span></h1>
-                <h5 className="hero-title mb-2">Front-End Tech Lead | Ui/Ux Expert.</h5>
+            <div className="hero-content w-100">
+                <h1 className="hero-title name fw-bold">Professional <span className="text-primary">Website Development</span><br/>
+                for Businesses That Want<br/>
+                <span className="text-primary">More Customers</span>
+                </h1>
                 <h5 className="hero-title mt-0">9+ Years of Experience</h5>
-                <p className="hero-description mt-4 mb-4">I build scalable, high performance web applications<br/> and lead teams to deliver outstanding products.</p>
-                <div className="hero-buttons d-flex gap-3">
-                    <Button size="" download href="../assets/Karan_Pawar_Frontend_Tech_Lead_Resume.pdf">
-                        <i className="bi bi-download me-2"></i>
-                        Download Resume
+                <p className="hero-description mt-2 mb-4">I help startups and local businesses build fast,<br/> modern and SEO-friendly websites that attract<br/> more customers and grow their business.</p>
+                <div className="hero-buttons d-flex flex-wrap gap-3">
+                    <Button size="" href="https://wa.me/917045894361" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-whatsapp me-2"></i>
+                        Get a Free Quote
                     </Button>
-                    <Button size="" href="tel:+917045894361">
-                        <i className="bi bi-phone me-2"></i>
-                        Schedule a Call
+                    <Button as={Link} to="/projects" className="btn btn-primary">
+                        <i className="bi bi-eye me-2"></i>
+                        View My Projects
                     </Button>
                 </div>
             </div>
-            {/* <img src={profileImg} alt="Hero Image" className="hero-image w-20" /> */}
+            <img src={profileImg} alt="Hero Image" className="hero-image rounded img-fluid" />
         </section>
-        <section className="social-icons d-flex align-items-center gap-4 mt-3">
-            <a href="https://github.com/karanpawar" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-github fs-2 text-white"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/karan-pawar-6aa51390/" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-linkedin fs-2 text-white"></i>
-            </a>
-            <a href="mailto:pawarkaru111@gmail.com" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-envelope-fill fs-2 text-white"></i>
-            </a>
-        </section>
-        <section className="indicators d-flex flex-column flex-lg-row align-items-center mt-3 gap-2">
+        <section className="indicators d-flex flex-column flex-md-row flex-lg-row align-items-center mt-3 gap-2">
             <div className="boxes rounded p-4">
                 <h2>9+</h2>
-                <span>Years of Experience</span>
+                <span>Years Experience</span>
             </div>
             <div className="boxes rounded p-4">
                 <h2>20+</h2>
-                <span>Projects Delivered</span>
+                <span>Websites Delivered</span>
             </div>
             <div className="boxes rounded p-4">
                 <h2>13+</h2>
-                <span>Team Size Led</span>
+                <span>Happy Clients</span>
             </div>
             <div className="boxes rounded p-4">
                 <h2>100%</h2>
-                <span>Client Satisfaction</span>
+                <span>Responsive Design</span>
             </div>
-        </section>
-        <section className="mt-3 d-flex flex-column justify-content-between flex-lg-row gap-3">
-            <span className="d-flex align-items-center gap-3">
-                <i className="bi bi-globe fs-3 text-primary text-success"></i>
-                Open to Remote Opportunities Worldwide.
-            </span>
-            <span className="d-flex align-items-center gap-3">
-                <i className="bi bi-check-circle fs-3 text-primary text-success"></i>
-                Immediate Available for Projects.
-            </span>
-            <span className="d-flex align-items-center gap-3">
-                <i className="bi bi-code fs-3 text-primary text-success"></i>
-                Available for Freelance, Contract, and Full-Time Roles.
-            </span>
         </section>
     </Container>
   );

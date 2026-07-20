@@ -1,0 +1,116 @@
+@use "../../styles/variables" as *;
+
+.process-section {
+    background: $bg-primary;
+    .section-title {
+        margin-bottom: 50px;
+        span {
+            color: $primary;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        p {
+            color: $text-secondary;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+    }
+    .timeline {
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            &:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                left: 23px;
+                top: 55px;
+                width: 2px;
+                height: calc(100% + 10px);
+                background: rgba(139,92,246,.3);
+            }
+            .timeline-number {
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+                border-radius: 50%;
+                border: 2px solid $primary;
+                color: $primary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                background: $card-bg;
+                box-shadow: 0 0 20px rgba(139,92,246,.25);
+            }
+            .timeline-content {
+                flex: 1;
+                background: $card-bg;
+                border: 1px solid $border-color;
+                border-radius: 16px;
+                padding: 22px;
+                transition: .3s;
+                &:hover {
+                    transform: translateX(8px);
+                    border-color: $primary;
+                    box-shadow: 0 15px 35px rgba(139,92,246,.2);
+                }
+                h5 {
+                    color: $text-primary;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                }
+                p {
+                    color: $text-secondary;
+                    margin: 0;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+
+    .process-image {
+        text-align: center;
+        img {
+            width: 100%;
+            max-width: 520px;
+            animation: float 4s ease-in-out infinite;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .section-title {
+            p {
+                margin: auto;
+            }
+        }
+        .process-image {
+            margin-top: 60px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 70px 0;
+        .timeline {
+            .timeline-item {
+                gap: 15px;
+                .timeline-content {
+                    padding: 18px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

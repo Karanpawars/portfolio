@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+
+.about-section {
+    .btn {
+        background-color: $primary-dark !important;
+        border: 0 !important;
+    }
+    .about-rhs {
+        border: 1px solid $primary-light;
+    }
+}
+
+.mis-vis {
+    .boxes {
+        background-color: $card-bg;
+    }
+}
+
+@media (max-width: 991px) { 
+    .about-section {
+        .w-30,
+        .w-50 {
+            width: 100% !important;
+        }
+    }
+}

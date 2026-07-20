@@ -1,10 +1,14 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 .hero-container {
     .name {
-        font-size: 5rem;
+        font-size: 3rem;
         span {
-            color: $primary-light !important;
+            color: $primary !important;
         }
+    }
+    .hero-image {
+        width: 50%;
+        box-shadow: 0 20px 40px rgba(34, 197, 94, 0.25);
     }
     .hero-buttons {
         a {
@@ -14,9 +18,28 @@
     }
     .indicators {
         .boxes {
-            background-color: $light-box;
+            background-color: $card-bg;
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+@media (max-width: 991px) {     
+    .hero-container {
+        margin-top: 100px !important;
+        .name {
+            font-size: 2rem;
+        }
+        .hero-image {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .indicators {
+            .boxes {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
